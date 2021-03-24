@@ -1,0 +1,28 @@
+<div class="box box-primary">
+    <div class="box-body no-padding">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Quantidade/dia</th>
+            <th>Valor/dia</th>
+            <th>Quantidade/mes</th>
+            <th>Valor/mes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {loop="$average"}
+          <tr>
+            <td>{$value.name}</td>
+            <td>{$value.quantity / 365}</td>
+            <td>{$value.value / 365}</td>
+            <td>{$value.quantity / 12}</td>
+            <td>{$value.value / 12}</td>
+          </tr>
+          {/loop}
+        </tbody>
+      </table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+</div>

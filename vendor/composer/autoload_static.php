@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/fkdev/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'F' => 
+        array (
+            'Fkdev\\' => 6,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Fkdev\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fkdev/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -34,7 +44,8 @@ class ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit5ed3caca89c629d276ce76b902fc3cf3::$classMap;
 

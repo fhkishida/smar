@@ -12,7 +12,7 @@
     },
     "autoload":{
         "psr-4": {
-            "": "vendor\\fkdev\\php-classes\\src"
+            "Fkdev\\": "vendor\\fkdev\\php-classes\\src"
         }
     }
 }
